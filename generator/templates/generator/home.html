@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container text-center">
+    <h1>Password Generator</h1>
+    <form action="{% url 'password' %}">
+        <select name="length">
+            <option value="6">Six</option>
+            <option value="7">Seven</option>
+            <option value="8" selected="selected">Eight</option>
+            <option value="9">Nine</option>
+            <option value="10">Ten</option>
+            <option value="11">Eleven</option>
+            <option value="12">Twelve</option>
+        </select> Length
+        <br>
+        <input type="checkbox" name="uppercase"> Uppercase
+        <br>
+        <input type="checkbox" name="numbers"> Numbers
+        <br>
+        <input type="checkbox" name="special"> Special Characters
+        <br>
+        <input type="submit" value="Generate Password" class="btn btn-primary">
+        <br>
+        <br>
+        <a href="{% url 'aboutpage' %}">About This Generator</a>
+    </form>
+    </div>
+</body>
+</html>
